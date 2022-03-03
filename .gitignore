@@ -2,27 +2,18 @@
 /*
 # keep project files
 !.clang-format
-!.gitignore
-!.gitattributes
-!.gitmodules
+!.git*
 !.gitconfig
 !.editorconfig
-!.eslintrc
-!.eslintignore
-!.eslintrc.json
-!.eslintrc.js
-!.eslintrc.yaml
-!.eslintrc.yml
-!.eslintrc.jsonc
-!.prettierrc
-!.prettierignore
-!.prettierrc.json
-!.prettierrc.js
-!.prettierrc.yaml
-!.prettierrc.yml
-!.prettierrc.jsonc
-!flutter-init.ps1
+!.eslintrc*
+!.prettier*
+!flutter-create.*
 ### CLEAN THIS UP!!!! ^^^
+
+###
+## proj specific rules:
+###
+
 
 # Windows thumbnail cache files
 Thumbs.db
