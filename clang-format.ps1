@@ -3,12 +3,13 @@ SPDX-License-Identifier: MIT
 Author: Mark Gutenberger <mark-gutenberger@outlook.com>
 clang-format.ps1 (c) 2022
 Created:  2022-02-28T13:59:28.751Z
-Modified: 2022-03-03T14:29:54.486Z
+Modified: 2022-03-04T14:03:03.409Z
 #>
 
 
 function Main() {
-	bash ./clang-format.sh
+	#! /bin/bash
+	bash . ./clang-format.sh
 	exit
 }
 
@@ -19,7 +20,7 @@ function Find-Env() {
 	catch {
 		Write-Error "[clang-format.ps1]: Warn: `"WSL is not installed.`"" -ForegroundColor yellow
 	}
- finally {
+	finally {
 		try {
 			bash --version
 		}
@@ -32,6 +33,8 @@ function Find-Env() {
 
 try {
 	if (Find-Env) {
+		[string]$WorkingDir = Get-Location
+		$WorkingDir = $WorkingDir.Replace('\', '/')
 		Main
 	}
 	else {
@@ -41,5 +44,4 @@ try {
 }
 catch {
 	Write-Error "[clang-format.ps1]: Error: clang-format not found"
-	exit
 }
