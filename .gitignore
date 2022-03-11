@@ -9,6 +9,8 @@
 !.eslintrc*
 !.prettier*
 !flutter-create.*
+!backspace.vim
+!readme.md
 ### CLEAN THIS UP!!!! ^^^
 
 ###
