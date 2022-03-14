@@ -18,6 +18,8 @@
 ###
 
 
+.npmrc
+.NOTES
 !.gitkeep
 # Windows thumbnail cache files
 Thumbs.db
